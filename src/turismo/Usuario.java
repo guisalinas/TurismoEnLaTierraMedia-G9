@@ -1,4 +1,4 @@
-package turismoEnTierraMedia;
+package turismo;
 
 public class Usuario {
 
@@ -15,11 +15,11 @@ public class Usuario {
     	this.preferencias= preferencias ;
     }
     
-    public void aceptarSugerencia (sugerencia){
+   /* public void aceptarSugerencia (sugerencia){
     	this.tiempoDisponible = this.tiempoDisponible - sugerencia.tiempoRequerido;
     	this.presupuesto = this.presupuesto - sugerencia.precio;
     	
-    }
+    }*/
     
     
     public String getNombre() {
