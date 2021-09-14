@@ -1,26 +1,20 @@
 package turismo;
 
-public class Usuario {
+public class Usuario{
 
 	private String nombre ;
 	private int tiempoDisponible ;
 	private int presupuesto ;
 	private String preferencias ;
     private String promocionesAdquiridas ;
+    private Sugerencias sugerencia;
 	
-    public Usuario(String nombre , int tiempoDisponible , int presupuesto , String preferencias ) {
+    public Usuario(String nombre , int tiempoDisponible , int presupuesto , String gusto) {
     	this.nombre= nombre;
     	this.tiempoDisponible= tiempoDisponible;
     	this.presupuesto = presupuesto ;
-    	this.preferencias= preferencias ;
-    }
-    
-   /* public void aceptarSugerencia (sugerencia){
-    	this.tiempoDisponible = this.tiempoDisponible - sugerencia.tiempoRequerido;
-    	this.presupuesto = this.presupuesto - sugerencia.precio;
-    	
-    }*/
-    
+    	this.preferencias= gusto ;
+    }   
     
     public String getNombre() {
 		return nombre;
@@ -71,12 +65,12 @@ public class Usuario {
 	}
 
 	public void aceptaSugerencia() {
-		this.presupuesto -= Sugerencias.getPrecioSugerencia();
-		this.tiempoDisponible -= Sugerencias.getTiempoSugerencia();
+		this.tiempoDisponible -= sugerencia.getTiempoSugerencia();
+		this.presupuesto -= sugerencia.getPrecioSugerencia();
+		
 		
 	}
-	
-	
+
 	
 	
 }

@@ -1,16 +1,20 @@
 package turismo;
 
+import java.util.Collections;
+import java.util.LinkedList;
+
 public class Turismo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// prueba commit.
-		// inicializar array con atracciones, usuarios y promociones
 		
 		String respuesta;
 		
-		Usuario usuarios[] = Archivos.leerArchivo(usuarios.txt);
-		String sugerenciasUsuario[] = Sugerencias.getSugerencia(usuarios);;
+		LinkedList<Usuario> usuarios = Archivos.leerArchivoUsuario("usuarios.txt");
+		LinkedList<Atraccion> atracciones = Archivos.leerArchivoAtracion("atracciones.txt");
+		
+		Collections.sort(atracciones);
+		
+		String sugerenciasUsuario[] = Sugerencias.getSugerencia(usuarios);
 		
 		for (Usuario indiceUsuarios : usuarios) {
 			
