@@ -25,6 +25,7 @@ public class Usuario {
     public String getNombre() {
 		return nombre;
 	}
+    
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -32,20 +33,27 @@ public class Usuario {
 	public int getPresupuesto() {
 		return presupuesto;
 	}
+	
 	public void setPresupuesto(int presupuesto) {
-		this.presupuesto = presupuesto;
+		if (validarDato(presupuesto)) {
+			this.presupuesto = presupuesto;			
+		}
 	}
 	
 	public int getTiempoDisponible() {
 		return tiempoDisponible;
 	}
+	
 	public void setTiempoDisponible(int tiempoDisponible) {
-		this.tiempoDisponible = tiempoDisponible;
+		if (validarDato(tiempoDisponible)) {
+			this.tiempoDisponible = tiempoDisponible;
+		}
 	}
 	
 	public String getPreferencias() {
 		return preferencias;
 	}
+	
 	public void setPreferencias(String preferencias) {
 		this.preferencias = preferencias;
 	}
@@ -53,8 +61,19 @@ public class Usuario {
 	public String getPromocionesAdquiridas() {
 		return promocionesAdquiridas;
 	}
+	
 	public void setPromocionesAdquiridas(String promocionesAdquiridas) {
 		this.promocionesAdquiridas = promocionesAdquiridas;
+	}
+	
+	private boolean validarDato(int dato) {
+		return dato>0;
+	}
+
+	public void aceptaSugerencia() {
+		this.presupuesto -= Sugerencias.getPrecioSugerencia();
+		this.tiempoDisponible -= Sugerencias.getTiempoSugerencia();
+		
 	}
 	
 	
