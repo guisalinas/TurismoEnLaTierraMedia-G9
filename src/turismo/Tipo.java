@@ -4,4 +4,4 @@ public enum Tipo {
 
 	AVENTURA, PAISAJE, DEGUSTACIÓN 
  
-    }
+}
