@@ -14,7 +14,6 @@ public class Turismo {
 		
 		Collections.sort(atracciones);
 		
-		*/String sugerenciasUsuario[] = Sugerencias.getSugerencia(usuarios);/*
 		
 		for (Usuario cadaUsuario : usuarios) {
 			
