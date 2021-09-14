@@ -14,9 +14,9 @@ public class Turismo {
 		
 		Collections.sort(atracciones);
 		
-		String sugerenciasUsuario[] = Sugerencias.getSugerencia(usuarios);
+		*/String sugerenciasUsuario[] = Sugerencias.getSugerencia(usuarios);/*
 		
-		for (Usuario indiceUsuarios : usuarios) {
+		for (Usuario cadaUsuario : usuarios) {
 			
 			System.out.println("Bienvenido" + indiceUsuarios.getNombre());
 			System.out.println(indiceUsuarios.getPresupuesto());
@@ -26,7 +26,8 @@ public class Turismo {
 			System.out.println("Podemos ofrecerte las siguientes atraccciones y promociones: ");
 			
 			
-			for (String indiceSugerencias : sugerenciasUsuario){
+			for (String cadaAtraccion : atracciones){
+     
 				
 				System.out.println("Desea comprarlo? (S/N)");
 				if (respuesta == "S") {
